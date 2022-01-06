@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="buttons">
+          <a href="#" class="btn btn-primary" [routerLink]="['/add-contact']">Add new contact</a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div *ngFor="let contact of contacts" class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{contact.login.username}}</h5>
+            <h6 class="card-subtitle mb-2"> {{contact.email}}</h6>
+            <img class="card img-thumbnail mb-2" src="{{contact.picture.large}}" alt="{{contact.login.username}}">
+            <h6 class="card-subtitle mb-2"> {{contact.name.title}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted"> {{contact.name.first}}</h6>
+            <h6 class="card-subtitle mb-2"> {{contact.name.last}}</h6>
+            <h6 class="card-subtitle mb-2"> Age : {{contact.dob.age}}</h6>
+            <h6 class="card-subtitle mb-2"> {{contact.location.country}}</h6>
+            <div class="actions">
+        <!--    <fa-icon [icon]="faTrash" (click)="deleteContact(contact)"></fa-icon>
+              <fa-icon [icon]="faEdit" (click)="editContact(contact)"></fa-icon>  -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
