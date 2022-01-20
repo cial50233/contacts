@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   //version = dependencies['@angular/core'].substring(1);
-  version = 10;
+  version = 13;
   constructor() { }
 
   ngOnInit(): void {
