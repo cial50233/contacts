@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FeedbackService } from 'src/app/services/feedback.service';
 
 @Component({
   selector: 'feedback',
@@ -9,13 +9,14 @@ import { NgForm } from '@angular/forms';
 export class FeedbackComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private fs: FeedbackService) { }
 
   ngOnInit(): void {
   }
 
   addFeedback(form: { value: any; }){
     console.log(form.value);
+    this.fs.createFeedback(form.value);
   }
 
 }
