@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from "@angular/forms";
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ContactsListComponent } from './pages/contact/contacts-list/contacts-list.component';
 import { AddContactComponent } from './pages/contact/add-contact/add-contact.component';
 import { EditContactComponent } from './pages/contact/edit-contact/edit-contact.component';
+import { FeedbackComponent } from './pages/feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,14 @@ import { EditContactComponent } from './pages/contact/edit-contact/edit-contact.
     FooterComponent,
     ContactsListComponent,
     AddContactComponent,
-    EditContactComponent
+    EditContactComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

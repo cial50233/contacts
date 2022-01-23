@@ -4,6 +4,7 @@ import { ContactsListComponent } from './pages/contact/contacts-list/contacts-li
 import { EditContactComponent } from './pages/contact/edit-contact/edit-contact.component';
 import { AddContactComponent } from './pages/contact/add-contact/add-contact.component';
 import { HomeComponent } from './pages/home/home.component';
+import { FeedbackComponent } from './pages/feedback/feedback.component';
 
 const routes: Routes = [
 
@@ -19,6 +20,9 @@ const routes: Routes = [
   },
   {
     path: "edit-contact/:id", component: EditContactComponent
+  },
+  {
+    path: "feedback", component: FeedbackComponent
   },
   { path: '**', redirectTo: '/' }
 
